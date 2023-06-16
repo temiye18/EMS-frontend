@@ -4,6 +4,8 @@ const colors = {
   primary_dark: "#1B2028",
   primary_light: "#31353F;",
   primary_blue: "#3A6FF8",
+  primary_red: "#ee3726",
+  primary_green: "#1ECB4F",
   secondary: "#FFC01E",
   grey: "#9E9E9E",
   black: "#000",

@@ -2,11 +2,15 @@ import styled from "styled-components";
 import { Employee2 } from "assets/images";
 
 const LoginSection = styled.section`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  overflow-y: auto;
 
   .form--container {
-    flex: 1;
     padding: 0 3rem;
+    width: 100%;
+    margin: auto;
 
     img {
       display: flex;
@@ -19,14 +23,6 @@ const LoginSection = styled.section`
       text-align: center;
 
       font-weight: 500;
-      border: 3px solid transparent;
-      border-radius: 1rem;
-      transition: border-color 0.3s ease-in-out;
-
-      &:hover,
-      &:focus {
-        border-color: white;
-      }
     }
 
     .employee--btn,
@@ -44,7 +40,25 @@ const LoginSection = styled.section`
 
   form {
     display: grid;
-    gap: 4rem;
+    gap: 2.8rem;
+
+    .header {
+      button {
+        width: max-content;
+        border-radius: 100%;
+        padding: 1rem;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+      }
+    }
+
+    p.error--text {
+      color: ${({ theme }) => theme.colors.primary_red};
+    }
 
     & > div {
       display: flex;
@@ -81,17 +95,20 @@ const LoginSection = styled.section`
         border-bottom: 2px solid white;
       }
     }
+
+    button.login {
+      margin-bottom: 2rem;
+    }
   }
 
   .banner {
+    align-self: stretch;
+    position: relative;
     background-image: url(${Employee2});
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     border-radius: 5rem 0 0 0;
-    flex: 1;
-    width: 400px;
-    height: 100vh;
-    position: relative;
 
     &::before {
       content: "";
@@ -107,9 +124,9 @@ const LoginSection = styled.section`
 
     p {
       position: absolute;
-      bottom: 4rem;
+      top: 70%;
       left: 2rem;
-      transform: translateY(-30%);
+      transform: translateY(-50%);
       font-size: 2.5rem;
       font-weight: 600;
     }

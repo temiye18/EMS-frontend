@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const NavContainer = styled.nav`
-  flex-basis: min(256px, 100%);
-
   background-color: ${({ theme }) => theme.colors.primary_dark};
   color: ${({ theme }) => theme.colors.grey};
 
@@ -49,29 +47,69 @@ const NavContainer = styled.nav`
     }
   }
 
-  button.logout {
-    all: unset;
+  .bottom--item {
+    align-self: end;
+    display: grid;
+    place-items: center;
 
-    ${({ theme }) => theme.fonts.Poppins}
-    color: ${({ theme }) => theme.colors.grey};
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    padding: 0.8125rem 0.75rem;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
+    .profile {
+      margin-bottom: 2rem;
 
-    &:hover {
-      background-color: #ee3726;
-      color: ${({ theme }) => theme.colors.white};
-      font-weight: 500;
+      a {
+        text-align: center;
+        margin-top: 0.3rem;
+      }
+
+      .link {
+        background-color: ${({ theme }) => theme.colors.secondary};
+        color: ${({ theme }) => theme.colors.primary_dark};
+
+        border-radius: 100%;
+        padding: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        font-size: 1.25rem;
+        margin: auto;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        border: 3px solid transparent;
+        transition: border-color 0.3s ease-in-out;
+
+        &:hover {
+          border-color: white;
+        }
+      }
     }
 
-    span {
+    button.logout {
+      all: unset;
+
+      ${({ theme }) => theme.fonts.Poppins}
+      color: ${({ theme }) => theme.colors.grey};
+      cursor: pointer;
       display: flex;
       align-items: center;
-      font-size: 1.25rem;
+      gap: 0.7rem;
+      padding: 0.8125rem 0.75rem;
+      border-radius: 10px;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.primary_red};
+        color: ${({ theme }) => theme.colors.white};
+        font-weight: 500;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+      }
     }
   }
 `;
