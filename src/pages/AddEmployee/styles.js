@@ -76,9 +76,7 @@ const Container = styled.div`
         }
         input[type="file"] {
           /* Hide the default file input appearance */
-          opacity: 0;
-          position: absolute;
-          z-index: -1;
+          display: none;
         }
 
         .custom--file--input {

@@ -104,6 +104,11 @@ const Container = styled.div`
         padding: 0.5rem 0.8rem;
         border-width: 2px;
         border-radius: 10px;
+
+        &.delete:hover {
+          background-color: ${({ theme }) => theme.colors.primary_red};
+          color: ${({ theme }) => theme.colors.white};
+        }
       }
     }
   }

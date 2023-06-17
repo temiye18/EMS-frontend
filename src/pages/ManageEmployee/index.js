@@ -99,6 +99,7 @@ const ManageEmployee = () => {
                   </Button>
                   <Button
                     variant="yellow"
+                    className="delete"
                     onClick={() => handleDelete(employee.id)}
                   >
                     delete
